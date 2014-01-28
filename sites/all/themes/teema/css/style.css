@@ -179,6 +179,9 @@ div.status {
 #main {
   margin: 40px 0; }
 
+ul.inline .node-readmore {
+  padding-left: 0; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
