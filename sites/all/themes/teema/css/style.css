@@ -183,8 +183,10 @@ div.status {
 #main {
   margin: 40px 0; }
 
-.node-teaser h2 {
-  font-size: 1.6em; }
+.node-teaser {
+  padding-bottom: 30px; }
+  .node-teaser h2 {
+    font-size: 1.6em; }
 
 ul.inline .node-readmore {
   padding-left: 0; }
