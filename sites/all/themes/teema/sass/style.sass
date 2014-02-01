@@ -187,7 +187,13 @@ ul
     .node-readmore
       padding-left: 0
 
-
+.field-name-body
+  &:after
+    clear: both
+    content: "."
+    display: block
+    height: 0
+    visibility: hidden
 
 // Import custom styles.
 @import _custom.sass

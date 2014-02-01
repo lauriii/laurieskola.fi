@@ -185,6 +185,13 @@ div.status {
 ul.inline .node-readmore {
   padding-left: 0; }
 
+.field-name-body:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
