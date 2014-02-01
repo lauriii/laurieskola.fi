@@ -118,6 +118,10 @@ ol {
     ol ol ol {
       list-style-type: decimal; }
 
+/* Img */
+img {
+  max-width: 100%; }
+
 /* Abbreviation. */
 abbr {
   border-bottom: 1px dotted #666666;
