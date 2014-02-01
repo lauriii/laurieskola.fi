@@ -198,6 +198,9 @@ ul.inline .node-readmore {
   height: 0;
   visibility: hidden; }
 
+.field-label {
+  display: inline-block; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
