@@ -187,6 +187,9 @@ div.status {
   padding-bottom: 30px; }
   .node-teaser h2 {
     font-size: 1.6em; }
+  .node-teaser .field-name-field-image {
+    float: left;
+    padding: 0 5px 10px 0; }
 
 ul.inline .node-readmore {
   padding-left: 0; }
