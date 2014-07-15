@@ -232,7 +232,8 @@ input[type="submit"] {
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px; }
+  -webkit-border-bottom-left-radius: 5px;
+  color: white; }
 
 * {
   -webkit-box-sizing: border-box;
