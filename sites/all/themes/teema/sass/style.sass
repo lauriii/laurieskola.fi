@@ -213,6 +213,23 @@ ul
   font-size: 0.7em
   font-style: italic
 
+.comment
+  margin-bottom: 1em
+  h3
+    margin-bottom: 0em 
+  .links
+    ul
+      margin-left: 0
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  background: $blue
+  border: none   
+  padding: 10px 20px
+  @include border-radius(5px)
+
 // Import custom styles.
 @import _custom.sass
 
