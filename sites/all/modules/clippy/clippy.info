@@ -1,0 +1,9 @@
+name = Clippy
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2014-10-22
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "clippy"
+datestamp = "1413967980"
+

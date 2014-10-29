@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function clippy_init() {
+  global $base_url;
+
+  $settings = array(
+    'basepath' => $base_url . '/' . drupal_get_path('module', 'clippy') . '/agents/',
+    'agent' => variable_get('clippy_agent', 'Clippy'),
+  );
+  drupal_add_js(array('clippy' => $settings), 'setting');
+
+  drupal_add_js(drupal_get_path('module', 'clippy') . '/js/clippy.js');
+  drupal_add_js(drupal_get_path('module', 'clippy') . '/js/clippy.script.js');
+  drupal_add_css(drupal_get_path('module', 'clippy') . '/css/clippy.css');
+}
+
+/**
+ * Implements hook_permission().
+ */
+function clippy_permission() {
+  $permissions = array(
+    'administer clippy' => array (
+      'title' => t('Administer Clippy'),
+    ),
+  );
+
+  return $permissions;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function clippy_menu() {
+  $items = array();
+  $items['admin/config/user-interface/clippy'] = array(
+    'title' => 'Clippy settings',
+    'description' => 'Change Clippy settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('clippy_admin_form'),
+    'access arguments' => array('administer clippy'),
+  );
+
+  return $items;
+}
+
+function clippy_admin_form() {
+  $form['clippy_agent'] = array(
+    '#title' => 'Clippy agent',
+    '#type' => 'radios',
+    '#default_value' => variable_get('clippy_agent', 'Clippy'),
+    '#options' => array(
+      'Bonzi' => 'Bonzi',
+      'Clippy' => 'Clippy',
+      'F1' => 'F1',
+      'Genie' => 'Genie',
+      'Genius' => 'Genius',
+      'Links' => 'Links',
+      'Merlin' => 'Merlin',
+      'Peedy' => 'Peedy',
+      'Rocky' => 'Rocky',
+      'Rover' => 'Rover',
+    ),
+  );
+
+  return system_settings_form($form);
+}
